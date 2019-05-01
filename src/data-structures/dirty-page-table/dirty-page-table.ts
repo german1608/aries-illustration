@@ -6,7 +6,11 @@
 import DirtyPageEntry from './dirty-page-entry'
 
 class DirtyPageTable {
-    private table: DirtyPageEntry[]
+    private table: DirtyPageEntry[] = []
+
+    size() : number {
+        return this.table.length
+    }
 }
 
 export default DirtyPageTable
