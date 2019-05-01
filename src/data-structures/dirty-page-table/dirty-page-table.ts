@@ -8,8 +8,14 @@ import DirtyPageEntry from './dirty-page-entry'
 class DirtyPageTable {
     private table: DirtyPageEntry[] = []
 
-    size() : number {
+    size () : number {
         return this.table.length
+    }
+    
+    add (entry : DirtyPageEntry) : void {
+        const table = this.table.slice()
+        table.push(entry)
+        this.table = table
     }
 }
 
