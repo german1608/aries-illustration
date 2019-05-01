@@ -6,17 +6,17 @@
 import DirtyPageEntry from './dirty-page-entry'
 
 class DirtyPageTable {
-    private table: DirtyPageEntry[] = []
+	private table: DirtyPageEntry[] = []
 
-    size () : number {
-        return this.table.length
-    }
-    
-    add (entry : DirtyPageEntry) : void {
-        const table = this.table.slice()
-        table.push(entry)
-        this.table = table
-    }
+	public size(): number {
+		return this.table.length
+	}
+
+	public add(entry: DirtyPageEntry): void {
+		const table = this.table.slice()
+		table.push(entry)
+		this.table = table
+	}
 }
 
 export default DirtyPageTable
